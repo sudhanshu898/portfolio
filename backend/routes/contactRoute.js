@@ -6,15 +6,16 @@ const router = express.Router();
 // POST /api/contact
 router.post("/", async (req, res) => {
   try {
-    const { name, email, message } = req.body;
+    const { name, email, subject, message } = req.body;
 
-    if (!name || !email || !message) {
+    if (!name || !email || !subject || !message) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
     const contact = new Contact({
       name,
       email,
+      subject,
       message,
     });
 
@@ -22,6 +23,7 @@ router.post("/", async (req, res) => {
 
     res.status(201).json({ message: "Contact message saved" });
   } catch (error) {
+    console.error("Contact API error:", error);
     res.status(500).json({ message: "Server error" });
   }
 });
