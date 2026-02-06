@@ -10,7 +10,7 @@ const Education = () => {
             school: "Lovely Professional University, Punjab",
             degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
             date: "Aug 2023 - Present",
-            grade: "N/A CGPA",
+            grade: "6.8 CGPA",
             description: "I'm currently pursuing a Bachelor's degree in Computer Science and Engineering at LPU, Punjab.I've completed foundational courses in Data Structures, Algorithms, and Object-Oriented Programming. I'm actively exploring emerging technologies like Artificial Intelligence and Blockchain, and I'm especially interested in how they can be applied to solve real-world problems. I enjoy building projects that push me to think critically and learn beyond the classroom.",
             logo: lpuLogo,
             position: "left"

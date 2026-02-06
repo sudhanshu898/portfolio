@@ -9,7 +9,7 @@ const Contact = () => {
         subject: '',
         message: ''
     });
-    
+
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState('');
 
@@ -20,7 +20,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        
+
         // Using Formspree with your endpoint
         const response = await fetch('https://formspree.io/f/mojnadkp', {
             method: 'POST',
@@ -35,16 +35,16 @@ const Contact = () => {
                 _replyto: formData.email, // This ensures replies go to the sender
             }),
         });
-        
+
         if (response.ok) {
             setSubmitStatus('success');
             setFormData({ name: '', email: '', subject: '', message: '' });
         } else {
             setSubmitStatus('error');
         }
-        
+
         setIsSubmitting(false);
-        
+
         // Hide status message after 5 seconds
         setTimeout(() => setSubmitStatus(''), 5000);
     };
@@ -54,10 +54,10 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-slate-950 relative overflow-hidden">
+        <section id="contact" className="py-20 relative overflow-hidden">
             {/* Background decoration */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10"></div>
-            
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 pointer-events-none"></div>
+
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* Header Section */}
                 <div className="text-center mb-16" data-aos="fade-down">
@@ -86,7 +86,7 @@ const Contact = () => {
                     <div className="lg:w-1/3" data-aos="fade-right">
                         {/* Email Me Button */}
                         <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 mb-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                             onClick={handleEmailMe}>
+                            onClick={handleEmailMe}>
                             <div className="flex items-center">
                                 <div className="bg-white/20 p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform">
                                     <FiMail className="text-white text-2xl" />

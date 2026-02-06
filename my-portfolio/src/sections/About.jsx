@@ -1,15 +1,15 @@
 import React from 'react';
 
 const About = () => {
-   const stats = [
-  { label: 'Projects Completed', value: '7+' },
-  { label: 'Solving Code problems', value: '150+' },
-  { label: 'NGO & Social Work', value: 'Active' },
-];
+    const stats = [
+        { label: 'Projects Completed', value: '7+' },
+        { label: 'Solving Code problems', value: '150+' },
+        { label: 'NGO & Social Work', value: 'Active' },
+    ];
 
 
     return (
-        <section id="about" className="py-20 bg-slate-900/50">
+        <section id="about" className="py-20 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2
                     data-aos="fade-up"
@@ -19,7 +19,7 @@ const About = () => {
                 </h2>
 
                 <div className="flex flex-col md:flex-row items-center gap-12">
-                    
+
                     {/* Left Side - About Content */}
                     <div
                         data-aos="fade-right"
@@ -27,10 +27,10 @@ const About = () => {
                     >
                         <div className="relative group">
                             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                            
+
                             <div className="relative px-7 py-6 bg-slate-800 ring-1 ring-gray-900/5 rounded-lg">
                                 <div className="space-y-2 text-gray-400">
-                                    
+
                                     <p className="text-lg leading-8 text-gray-300">
                                         I specialize in building scalable and efficient web applications by turning
                                         complex ideas into clean, functional solutions. My interest in web technologies

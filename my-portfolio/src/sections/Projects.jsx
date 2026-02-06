@@ -30,7 +30,7 @@ const Projects = () => {
             description: "Operating system project simulating various page replacement algorithms including FIFO, LRU, and Optimal with performance analysis.",
             tech: ["Operating Systems", "Algorithms", "C++"],
             github: "https://github.com/sudhanshu898/OS_Project",
-            live: "https://sudhanshu898.github.io/DIY-Project-Planner-/",
+            live: "https://sudhanshu898.github.io/OS_Project/",
             image: PageReplacementImage
         },
         {
@@ -60,7 +60,7 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="py-20 bg-slate-900/50">
+        <section id="projects" className="py-20 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2
                     data-aos="fade-up"
@@ -78,8 +78,8 @@ const Projects = () => {
                             className="bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10"
                         >
                             <div className="h-48 relative overflow-hidden group bg-gray-900">
-                                <img 
-                                    src={project.image} 
+                                <img
+                                    src={project.image}
                                     alt={project.title}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
@@ -126,8 +126,8 @@ const Projects = () => {
                     data-aos-delay="600"
                     className="mt-16 text-center"
                 >
-                    <a 
-                        href="https://github.com/sudhanshu898" 
+                    <a
+                        href="https://github.com/sudhanshu898"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
