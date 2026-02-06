@@ -18,36 +18,61 @@ const Contact = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
-        // Using Formspree with your endpoint
-        const response = await fetch('https://formspree.io/f/mojnadkp', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                name: formData.name,
-                email: formData.email,
-                subject: formData.subject,
-                message: formData.message,
-                _replyto: formData.email, // This ensures replies go to the sender
-            }),
-        });
+    try {
+        // 1️⃣ Send to YOUR BACKEND (MongoDB)
+        const backendResponse = await fetch(
+            "https://portfolio-0ujk.onrender.com/api/contact",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            }
+        );
 
-        if (response.ok) {
-            setSubmitStatus('success');
-            setFormData({ name: '', email: '', subject: '', message: '' });
-        } else {
-            setSubmitStatus('error');
+        if (!backendResponse.ok) {
+            throw new Error("Backend failed");
         }
 
-        setIsSubmitting(false);
+        // 2️⃣ Send to FORMSPREE
+        const formspreeResponse = await fetch(
+            "https://formspree.io/f/mojnadkp",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    _replyto: formData.email,
+                }),
+            }
+        );
 
-        // Hide status message after 5 seconds
-        setTimeout(() => setSubmitStatus(''), 5000);
-    };
+        if (!formspreeResponse.ok) {
+            throw new Error("Formspree failed");
+        }
+
+        // ✅ SUCCESS
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+
+    } catch (error) {
+        console.error("Contact form error:", error);
+        setSubmitStatus("error");
+    }
+
+    setIsSubmitting(false);
+    setTimeout(() => setSubmitStatus(""), 5000);
+};
+
 
     const handleEmailMe = () => {
         window.location.href = 'mailto:sudhanshu78787@gmail.com?subject=Inquiry from Portfolio Website';
