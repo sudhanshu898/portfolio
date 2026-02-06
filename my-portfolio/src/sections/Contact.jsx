@@ -22,7 +22,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-        // 1️⃣ Send to YOUR BACKEND (MongoDB)
+        // 🔹 BACKEND (MongoDB)
         const backendResponse = await fetch(
             "https://portfolio-0ujk.onrender.com/api/contact",
             {
@@ -34,11 +34,13 @@ const Contact = () => {
             }
         );
 
+        console.log("Backend status:", backendResponse.status);
+
         if (!backendResponse.ok) {
             throw new Error("Backend failed");
         }
 
-        // 2️⃣ Send to FORMSPREE
+        // 🔹 FORMSPREE
         const formspreeResponse = await fetch(
             "https://formspree.io/f/mojnadkp",
             {
@@ -56,22 +58,19 @@ const Contact = () => {
             }
         );
 
-        if (!formspreeResponse.ok) {
-            throw new Error("Formspree failed");
-        }
+        console.log("Formspree status:", formspreeResponse.status);
 
-        // ✅ SUCCESS
         setSubmitStatus("success");
         setFormData({ name: "", email: "", subject: "", message: "" });
 
-    } catch (error) {
-        console.error("Contact form error:", error);
+    } catch (err) {
+        console.error("Form submit error:", err);
         setSubmitStatus("error");
     }
 
     setIsSubmitting(false);
-    setTimeout(() => setSubmitStatus(""), 5000);
 };
+
 
 
     const handleEmailMe = () => {
