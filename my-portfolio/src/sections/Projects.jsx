@@ -89,27 +89,7 @@ const Projects = () => {
                   className="w-full h-full object-cover"
                 />
 
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-3 bg-white/10 rounded-full hover:scale-110"
-                  >
-                    <FaGithub />
-                  </a>
-
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="p-3 bg-white/10 rounded-full hover:scale-110"
-                    >
-                      <FaExternalLinkAlt />
-                    </a>
-                  )}
-                </div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
               </div>
 
               <div className="p-6">
@@ -118,7 +98,7 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((t, i) => (
                     <span
                       key={i}
@@ -127,6 +107,30 @@ const Projects = () => {
                       {t}
                     </span>
                   ))}
+                </div>
+
+                <div className="flex gap-4">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 text-gray-300 hover:text-blue-500 transition-colors"
+                  >
+                    <FaGithub size={20} />
+                    <span className="text-sm">Code</span>
+                  </a>
+
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-2 text-gray-300 hover:text-blue-500 transition-colors"
+                    >
+                      <FaExternalLinkAlt size={18} />
+                      <span className="text-sm">Live Demo</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
