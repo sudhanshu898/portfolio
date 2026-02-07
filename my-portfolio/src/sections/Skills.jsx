@@ -34,8 +34,8 @@ const Skills = () => {
         },
         {
             title: "Languages",
-            color: "border-green-500",
-            bgGradient: "bg-gradient-to-br from-green-900/20 to-green-900/5",
+            color: "border-blue-500",
+            bgGradient: "bg-gradient-to-br from-blue-900/20 to-blue-900/5",
             icon: <FaCode className="text-2xl" />,
             skills: [
                 { name: "C++", icon: <SiCplusplus />, color: "text-blue-400" },
@@ -48,8 +48,8 @@ const Skills = () => {
         },
         {
             title: "Backend & Services",
-            color: "border-purple-500",
-            bgGradient: "bg-gradient-to-br from-purple-900/20 to-purple-900/5",
+            color: "border-blue-500",
+            bgGradient: "bg-gradient-to-br from-blue-900/20 to-blue-900/5",
             icon: <FaServer className="text-2xl" />,
             skills: [
                 { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
@@ -66,8 +66,8 @@ const Skills = () => {
         },
         {
             title: "Machine Learning",
-            color: "border-orange-500",
-            bgGradient: "bg-gradient-to-br from-orange-900/20 to-orange-900/5",
+            color: "border-blue-500",
+            bgGradient: "bg-gradient-to-br from-blue-900/20 to-blue-900/5",
             icon: <FaBrain className="text-2xl" />,
             skills: [
                 { name: "Python", icon: <FaPython />, color: "text-yellow-400" },
@@ -79,8 +79,8 @@ const Skills = () => {
         },
         {
             title: "Tools & Others",
-            color: "border-pink-500",
-            bgGradient: "bg-gradient-to-br from-pink-900/20 to-pink-900/5",
+            color: "border-blue-500",
+            bgGradient: "bg-gradient-to-br from-blue-900/20 to-blue-900/5",
             icon: <FaTools className="text-2xl" />,
             skills: [
                 { name: "Linux", icon: <FaLinux />, color: "text-yellow-500" },
