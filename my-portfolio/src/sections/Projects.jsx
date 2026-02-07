@@ -22,7 +22,7 @@ const Projects = () => {
             description: "A full-stack e-commerce platform for fashion retail with shopping cart, user authentication, payment integration, and admin dashboard.",
             tech: ["MongoDB", "Express", "React", "Node.js"],
             github: "https://github.com/sudhanshu898/Fashion-Store---MERN-E-Commerce-Application/tree/main/OneDrive/Attachments/Desktop/MERNStackeCommerce",
-            live: "#",
+            live: "https://fashion-store-frontend-liard.vercel.app/",
             image: FashionStoreImage
         },
         {
@@ -46,7 +46,7 @@ const Projects = () => {
             description: "A modern, responsive portfolio website showcasing projects, skills, and professional experience with smooth animations and clean design.",
             tech: ["React", "Tailwind CSS", "AOS"],
             github: "https://github.com/sudhanshu898/portfolio",
-            live: "#",
+            live: "https://portfolio-vercel-zeta-brown.vercel.app/",
             image: PortfolioImage
         },
         {
