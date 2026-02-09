@@ -30,7 +30,7 @@ const Education = () => {
             school: "Central Board of Secondary Education (CBSE)",
             degree: "Matriculation",
             date: "Jan 2018 - May 2020",
-            grade: "59.0%",
+            grade: "59%",
             description: "Attended Bramha High School, receiving a comprehensive education that laid the foundation for academic excellence and personal growth, shaping a well-rounded individual.",
             logo: cbseLogo,
             position: "left"
