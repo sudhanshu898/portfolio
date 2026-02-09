@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   FaReact, FaHtml5, FaCss3Alt, FaJs, FaPython, FaJava, FaPhp,
   FaNodeJs, FaLinux, FaGitAlt, FaGithub, FaFigma, FaBrain,
@@ -97,36 +97,43 @@ const Skills = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 mb-4 border border-purple-500/30">
             <span className="text-3xl">🚀</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 data-aos="fade-up" className="text-3xl md:text-4xl font-bold text-white mb-3">
             My <span className="text-blue-500">Skills</span>
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p data-aos="fade-up" data-aos-delay="100" className="text-lg text-gray-400 max-w-2xl mx-auto">
             Technologies, tools, and strengths I bring to the table
           </p>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" data-aos="fade-up">
           {skillCategories.map((category, idx) => (
             <div
               key={idx}
-              className={`rounded-2xl border ${category.color} ${category.bgGradient} p-6 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
+              data-aos="zoom-in"
+              data-aos-delay={idx * 120}
+              className={`group relative rounded-2xl border ${category.color} ${category.bgGradient} p-6 backdrop-blur-sm shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300`}
             >
+              {/* Glow */}
+              <div className="absolute inset-0 rounded-2xl bg-blue-500/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300" />
+
               {/* Category Header */}
-              <div className="flex items-center mb-6">
-                <div className={`w-2 h-8 ${category.color.replace('border', 'bg')} rounded-full mr-3`} />
+              <div className="relative flex items-center mb-6">
+                <div className={`w-2 h-8 ${category.color.replace("border", "bg")} rounded-full mr-3`} />
                 <span className="mr-3 text-white">{category.icon}</span>
                 <h3 className="text-xl font-bold text-white">{category.title}</h3>
               </div>
 
               {/* Skills */}
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+              <div className="relative grid grid-cols-3 sm:grid-cols-4 gap-3">
                 {category.skills.map((skill, sIdx) => (
                   <div
                     key={sIdx}
-                    className="group bg-slate-800/80 rounded-xl p-3 border border-gray-700 hover:border-blue-500 transition-all duration-200 hover:scale-105 flex flex-col items-center"
+                    data-aos="zoom-in"
+                    data-aos-delay={sIdx * 40}
+                    className="group bg-slate-800/80 rounded-xl p-3 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:scale-110 flex flex-col items-center"
                   >
-                    <div className={`text-3xl mb-2 ${skill.color}`}>
+                    <div className={`text-3xl mb-2 ${skill.color} transition-transform duration-300 group-hover:rotate-6 group-hover:scale-125`}>
                       {skill.icon}
                     </div>
                     <span className="text-[10px] sm:text-xs text-gray-400 text-center truncate w-full">
