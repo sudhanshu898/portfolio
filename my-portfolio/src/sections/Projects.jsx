@@ -8,6 +8,7 @@ import AIDiyImage from '../assets/AI_DIY_Project.png';
 import PortfolioImage from '../assets/Portfolio.png';
 import SimpleCompilerImage from '../assets/SimpleCompiler.png';
 
+
 const Projects = () => {
   const projects = [
     {
@@ -53,7 +54,7 @@ const Projects = () => {
         "A modern portfolio showcasing projects, skills, and experience with smooth animations.",
       tech: ["React", "Tailwind CSS", "AOS"],
       github: "https://github.com/sudhanshu898/portfolio",
-      live: "https://portfolio-vercel-cfmlo99r4.vercel.app/",
+      live: "#",
       image: PortfolioImage,
     },
     {
