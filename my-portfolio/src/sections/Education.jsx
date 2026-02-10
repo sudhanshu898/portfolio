@@ -10,7 +10,6 @@ const Education = () => {
             school: "Lovely Professional University, Punjab",
             degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
             date: "Aug 2023 - Present",
-            grade: "6.8 CGPA",
             description: "I'm currently pursuing a Bachelor's degree in Computer Science and Engineering at LPU, Punjab.I've completed foundational courses in Data Structures, Algorithms, and Object-Oriented Programming. I'm actively exploring emerging technologies like Artificial Intelligence and Blockchain, and I'm especially interested in how they can be applied to solve real-world problems. I enjoy building projects that push me to think critically and learn beyond the classroom.",
             logo: lpuLogo,
             position: "left"
@@ -20,7 +19,6 @@ const Education = () => {
             school: "Bihar School Examination Board (BSEB)",
             degree: "Intermediate",
             date: "Jun 2020 - Apr 2022",
-            grade: "79%",
             description: "Actively participated in inter-college science competitions and contributed to group projects in Physics and Chemistry. Recognized by faculty for consistent academic dedication and teamwork skills during the program.",
             logo: bsebLogo,
             position: "right"
@@ -30,7 +28,6 @@ const Education = () => {
             school: "Central Board of Secondary Education (CBSE)",
             degree: "Matriculation",
             date: "Jan 2018 - May 2020",
-            grade: "59%",
             description: "Attended Bramha High School, receiving a comprehensive education that laid the foundation for academic excellence and personal growth, shaping a well-rounded individual.",
             logo: cbseLogo,
             position: "left"
