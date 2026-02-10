@@ -109,11 +109,7 @@ const Education = () => {
                                                 </div>
                                             </div>
 
-                                            {/* Grade Section */}
-                                            <div className="mt-2 text-left">
-                                                <span className="text-gray-400 font-bold">Grade: </span>
-                                                <span className="text-gray-300">{item.grade}</span>
-                                            </div>
+                                            
 
                                             {/* Description */}
                                             <div className="text-gray-400 text-sm leading-relaxed text-justify">
